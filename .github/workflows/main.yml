@@ -32,7 +32,31 @@ jobs:
       - name: build the artifacts
         run:  mvn clean package
       - name: check the war file
-        run: ls -ltr
+        run: ls -ltr target
+      - name: Upload war Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: appjava
+          path: target/*.war
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
         
         
         
